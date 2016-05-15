@@ -1,4 +1,10 @@
 PATH
+  remote: handlers/lita-http_handle
+  specs:
+    lita-http_handle (0.1.0)
+      lita (>= 4.7)
+
+PATH
   remote: handlers/lita-reply_handler
   specs:
     lita-reply_handler (0.1.0)
@@ -56,6 +62,7 @@ PLATFORMS
 
 DEPENDENCIES
   lita
+  lita-http_handle!
   lita-reply_handler!
   lita-slack
 
