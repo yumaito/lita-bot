@@ -8,6 +8,8 @@ module Lita
 
       route /^time$/i, :reply_clock, help: {"brian2: time" => "現在時刻を返してくれます"}
       route /どう思う？$/, :reply_ok, help: {"brian2: ...どう思う？" => "とにかく肯定してくれます" }
+      route /^Who are you\?$/i, :introduce_en, help: {"brian2: Who are you?" => "自己紹介してくれます（英語）"}
+      route /誰？$/, :introduce_jp, help: {"brian2: 誰？" => "自己紹介してくれます（日本語）"}
 
       def reply_clock(response)
           time = Time.now
@@ -27,6 +29,17 @@ module Lita
           output_str = get_mention_name(response) + " " + vocabulary.sort_by{rand}[0]
           response.reply(output_str)
       end
+
+      def introduce_en(response)
+          output_str = get_mention_name(response) + ' see: https://en.wikipedia.org/wiki/Brian_May'
+          response.reply(output_str)
+      end
+
+      def introduce_jp(response)
+          output_str = get_mention_name(response) + ' つ: https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%BB%E3%83%A1%E3%82%A4'
+          response.reply(output_str)
+      end
+
       def get_mention_name(response)
         return response.user.metadata["mention_name"]
       end
