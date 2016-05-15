@@ -5,7 +5,7 @@ module Lita
       @@Day = %w(日 月 火 水 木 金 土)
       @@Am_pm = { "AM" => "午前", "PM" => "午後" }
 
-      route /^time$/i, :reply_clock, help: {"brian2: 今何時？" => "現在時刻を返してくれます"}
+      route /^time$/i, :reply_clock, help: {"brian2: time" => "現在時刻を返してくれます"}
 
       def reply_clock(response)
           time = Time.now
