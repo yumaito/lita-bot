@@ -22,6 +22,7 @@ Lita.configure do |config|
   config.adapters.slack.token = ENV["SLACK_API_KEY"]
 
   config.redis[:url] = ENV["REDISTOGO_URL"]
+  # config.http.port =
   config.http.port   = ENV["PORT"]
 
   ## Example: Set options for the chosen adapter.

@@ -1,3 +1,9 @@
+PATH
+  remote: handlers/lita-reply_handler
+  specs:
+    lita-reply_handler (0.1.0)
+      lita (>= 4.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -50,6 +56,7 @@ PLATFORMS
 
 DEPENDENCIES
   lita
+  lita-reply_handler!
   lita-slack
 
 BUNDLED WITH
