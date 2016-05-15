@@ -13,7 +13,7 @@ module Lita
           day_of_week = @@Day[time.strftime("%w").to_i]
           am_pm = @@Am_pm[time.strftime("%p")]
           time_format_str = time.strftime("%Y年%m月%d日(#{day_of_week}) #{am_pm}%I時%M分%S秒")
-          time_format_str = get_mention_name(response) + "つ" + time_format_str + "やで" + "\n" + suffix_from_time(time)
+          time_format_str = get_mention_name(response) + " つ" + time_format_str + "やで" + "\n" + suffix_from_time(time)
           response.reply(time_format_str)
       end
 
