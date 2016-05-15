@@ -1,5 +1,5 @@
 Gem::Specification.new do |spec|
-  spec.name          = "lita-reply_handler"
+  spec.name          = "lita-http_handle"
   spec.version       = "0.1.0"
   spec.authors       = ["yumaito-mac"]
   spec.email         = ["yumaito0@gmail.com"]
