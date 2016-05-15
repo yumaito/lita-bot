@@ -10,6 +10,7 @@ module Lita
       route /どう思う？$/, :reply_ok, help: {"brian2: ...どう思う？" => "とにかく肯定してくれます" }
       route /^Who are you\?$/i, :introduce_en, help: {"brian2: Who are you?" => "自己紹介してくれます（英語）"}
       route /誰？$/, :introduce_jp, help: {"brian2: 誰？" => "自己紹介してくれます（日本語）"}
+      route /ありがとう(ございます)?|あざす(ー)?|thanks|thx/i, :youre_welcome, help: {"brian2: ありがとう" => "返事してくれます"}
 
       def reply_clock(response)
           time = Time.now
@@ -37,6 +38,11 @@ module Lita
 
       def introduce_jp(response)
           output_str = get_mention_name(response) + ' つ: https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%BB%E3%83%A1%E3%82%A4'
+          response.reply(output_str)
+      end
+
+      def youre_welcome(response)
+          output_str = get_mention_name(response) + " どういたしまして"
           response.reply(output_str)
       end
 
