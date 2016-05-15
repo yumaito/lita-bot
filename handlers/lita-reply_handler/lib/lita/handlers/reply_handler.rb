@@ -2,8 +2,9 @@ module Lita
   module Handlers
     class ReplyHandler < Handler
       # insert handler code here
-      @@Day = %w(日 月 火 水 木 金 土)
+      @@Day   = %w(日 月 火 水 木 金 土)
       @@Am_pm = { "AM" => "午前", "PM" => "午後" }
+      @@kao   = { hiso: "(*ﾟroﾟ)ﾋｿﾋｿ" }
 
       route /^time$/i, :reply_clock, help: {"brian2: time" => "現在時刻を返してくれます"}
 
@@ -12,7 +13,7 @@ module Lita
           day_of_week = @@Day[time.strftime("%w").to_i]
           am_pm = @@Am_pm[time.strftime("%p")]
           time_format_str = time.strftime("%Y年%m月%d日(#{day_of_week}) #{am_pm}%I時%M分%S秒")
-          time_format_str = get_mention_name(response) + " つ " + time_format_str + "\n" + suffix_from_time(time)
+          time_format_str = get_mention_name(response) + @@kao{:hiso} + "..." + time_format_str + "\n" + suffix_from_time(time)
           response.reply(time_format_str)
       end
 
