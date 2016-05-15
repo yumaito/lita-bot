@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+
 gem "lita"
 gem "lita-slack"
 # Uncomment to use the HipChat adapter
@@ -12,3 +13,4 @@ gem "lita-slack"
 # For example:
 # gem "lita-google-images"
 # gem "lita-karma"
+gem "lita-reply_handler",path: "handlers/lita-reply_handler"
