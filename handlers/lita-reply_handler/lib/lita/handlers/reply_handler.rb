@@ -7,6 +7,7 @@ module Lita
       @@kao   = { hiso: "(*ﾟroﾟ)ﾋｿﾋｿ" }
 
       route /^time$/i, :reply_clock, help: {"brian2: time" => "現在時刻を返してくれます"}
+      route /どう思う？$/, :reply_ok, help: {"brian2: ...どう思う？" => "とにかく肯定してくれます" }
 
       def reply_clock(response)
           time = Time.now
@@ -16,7 +17,16 @@ module Lita
           time_format_str = get_mention_name(response) + " つ" + time_format_str + "やで" + "\n" + suffix_from_time(time)
           response.reply(time_format_str)
       end
-
+      def reply_ok(response)
+          vocabulary = [
+              "いいと思うよ",
+              "なかなかいいアイデアだと思う",
+              "それ新しい",
+              "それいいね。天才",
+          ]
+          output_str = get_mention_name(response) + " " + vocabulary.sort_by{rand}[0]
+          response.reply(output_str)
+      end
       def get_mention_name(response)
         return response.user.metadata["mention_name"]
       end
