@@ -1,0 +1,6 @@
+en:
+  lita:
+    handlers:
+      get_weather:
+          weather_code:
+            clear_sky: 晴れ
