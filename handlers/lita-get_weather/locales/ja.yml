@@ -33,4 +33,13 @@ en:
             shower_rain: にわか雨
             heavy_intensity_shower_rain: 強いにわか雨
             ragged_shower_rain: 激しいにわか雨
-            
+            light_snow: 粉雪
+            snow: 雪
+            heavy_snow: 激しい雪
+            sleet: みぞれ
+            shower_sleet: にわかみぞれ
+            light_rain_and_snow: 軽い雨と雪
+            rain_and_snow: 雨と雪
+            light_shower_snow: 軽いにわか雪
+            shower_snow: にわか雪
+            heavy_shower_snow: 激しいにわか雪
