@@ -23,6 +23,7 @@ module Lita
             #
             # 表示に必要な情報を整形
             desc = result["weather"][0]["description"].gsub(/(\s)/,'_')
+            desc = desc.gsub(/,/,'')
             desc_jp = t("weather_code.#{desc}")
 
             reply_str = "#{city_name}の天気は#{desc_jp}"
