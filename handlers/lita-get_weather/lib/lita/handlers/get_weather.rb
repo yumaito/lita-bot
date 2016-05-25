@@ -16,7 +16,7 @@ module Lita
         if (city == @@no_result)
             response.reply("#{mention_name}: そんな地名ねーよ")
         else
-            key = 'http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid='+ @@Weather_API
+            key = 'http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=metric&appid='+ @@Weather_API
             uri = URI.parse(key)
             data = http.get(uri)
             result  = MultiJson.load(data.body)
@@ -25,14 +25,15 @@ module Lita
             desc = result["weather"][0]["description"].gsub(/(\s)/,'_')
             desc = desc.gsub(/,/,'')
             desc_jp = t("weather_code.#{desc}")
-
-            reply_str = "#{city_name}の天気は#{desc_jp}"
+            temparature = result["main"]["temp"]
+            humi = result["main"]["humidity"]
+            reply_str = "#{city_name}の天気は#{desc_jp}、気温#{temparature}℃、湿度#{humi}%"
             response.reply(reply_str)
         end
       end
       #  日本語都市名から英語都市名に変換（google maps api経由）
       def detect_city_name(city_name)
-          address = 'https://maps.googleapis.com/maps/api/geocode/json?address='+city_name+'&key='+ @@Google_API + '&language=en'
+          address = 'https://maps.googleapis.com/maps/api/geocode/json?address='+city_name+'&language=en&key='+ @@Google_API
           address_uri = URI.escape(address)
           address_data = http.get(address_uri)
           address_result = MultiJson.load(address_data.body)
