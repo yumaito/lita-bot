@@ -53,3 +53,22 @@ en:
             volcanic_ash: 火山灰
             squalls: スコール
             tornado: 竜巻
+            few_clouds: 晴れ
+            scattered_clouds: 雲少なめ
+            broken_clouds: 曇り
+            overcast_clouds: どんより空
+            tropical_storm: 台風（熱帯低気圧）
+            hurricane: ハリケーン
+            cold: 超寒い
+            hot: 超暑い
+            windy: 強風
+            hail: 雹
+            calm: おだやか
+            light_breeze: そよ風（弱）
+            gentle_breeze: そよ風
+            moderate_breeze: そよ風
+            fresh_breeze: そよ風
+            strong_breeze: そよ風（強）
+            high_wind_near_gale: 疾風
+            storm: 嵐
+            violent_storm: 激しい嵐
