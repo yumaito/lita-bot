@@ -1,4 +1,10 @@
 PATH
+  remote: handlers/lita-get_weather
+  specs:
+    lita-get_weather (0.1.0)
+      lita (>= 4.7)
+
+PATH
   remote: handlers/lita-http_handle
   specs:
     lita-http_handle (0.1.0)
@@ -62,6 +68,7 @@ PLATFORMS
 
 DEPENDENCIES
   lita
+  lita-get_weather!
   lita-http_handle!
   lita-reply_handler!
   lita-slack
