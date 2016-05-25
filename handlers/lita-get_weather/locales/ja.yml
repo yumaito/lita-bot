@@ -22,4 +22,15 @@ en:
             heavy_intensity_drizzle_rain: そこそこ強めの小雨
             shower_rain_and_drizzle: ちょっとしたにわか雨
             heavy_shower_rain_and_drizzle: にわか雨
+            shower_drizzle: にわか雨
+            light_rain: 小雨
+            moderate_rain: 雨
+            heavy_intensity_rain: 強い雨
+            very_heavy_rain: 土砂降りの雨
+            extreme_rain: バケツをひっくり返したような雨
+            freezing_rain: 雨氷
+            light_intensity_shower_rain: 軽いにわか雨
+            shower_rain: にわか雨
+            heavy_intensity_shower_rain: 強いにわか雨
+            ragged_shower_rain: 激しいにわか雨
             
