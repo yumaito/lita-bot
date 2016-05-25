@@ -14,4 +14,12 @@ en:
             thunderstorm_with_light_drizzle: 霧雨ときどき雷
             thunderstorm_with_drizzle: 小雨ときどき雷
             thunderstorm_with_heavy_drizzle: 雨ときどき雷
+            light_intensity_drizzle: 軽めの霧雨
+            drizzle: 小雨
+            heavy_intensity_drizzle: ちょっと強い小雨
+            light_intensity_drizzle_rain: まぁまぁな小雨
+            drizzle_rain: そこそこ小雨
+            heavy_intensity_drizzle_rain: そこそこ強めの小雨
+            shower_rain_and_drizzle: ちょっとしたにわか雨
+            heavy_shower_rain_and_drizzle: にわか雨
             
