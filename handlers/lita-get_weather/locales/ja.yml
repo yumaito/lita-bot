@@ -4,3 +4,14 @@ en:
       get_weather:
           weather_code:
             clear_sky: 晴れ
+            thunderstorm_with_light_rain: 雷雨（雨弱め）
+            thunderstorm_with_rain: 雷雨
+            thunderstorm_with_heavy_rain: 土砂降りの雷雨
+            light_thunderstorm: 雷
+            thunderstorm: 雷を伴った嵐
+            heavy_thunderstorm: 雷を伴った嵐（強）
+            ragged_thunderstorm: すごい雷
+            thunderstorm_with_light_drizzle: 霧雨ときどき雷
+            thunderstorm_with_drizzle: 小雨ときどき雷
+            thunderstorm_with_heavy_drizzle: 雨ときどき雷
+            
